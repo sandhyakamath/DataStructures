@@ -3,6 +3,7 @@ package com.godel.ds.implementation;
 import com.godel.ds.exceptions.EmptyStructureException;
 import com.godel.ds.interfaces.GenericStack;
 
+@SuppressWarnings("unchecked")
 public class ArrayStack<E> implements GenericStack<E> {
     int topIndex;
     E[] data;
@@ -20,7 +21,7 @@ public class ArrayStack<E> implements GenericStack<E> {
     @Override
     public E peek() {
         if (isEmpty()) {
-            throw new EmptyStructureException("Stack is empty");
+            throw new EmptyStructureException("CustomList is empty");
         }
         else
             return data[topIndex];
@@ -29,7 +30,7 @@ public class ArrayStack<E> implements GenericStack<E> {
     @Override
     public E pop() {
         if (isEmpty()) {
-            throw new EmptyStructureException("Stack is empty");
+            throw new EmptyStructureException("CustomList is empty");
         } else {
             E result = data[topIndex];
             topIndex--;

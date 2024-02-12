@@ -3,6 +3,7 @@ package com.godel.ds.implementation;
 import com.godel.ds.exceptions.EmptyStructureException;
 import com.godel.ds.interfaces.GenericQueue;
 
+@SuppressWarnings("unchecked")
 public class ArrayQueue<E> implements GenericQueue<E> {
     private int front;
     private E[] data;
@@ -32,7 +33,7 @@ public class ArrayQueue<E> implements GenericQueue<E> {
     @Override
     public E remove() {
         if (isEmpty()) {
-            throw new EmptyStructureException("Stack is empty");
+            throw new EmptyStructureException("CustomList is empty");
         }
         E result = data[front];
         System.out.println("removed "+data[front]);
